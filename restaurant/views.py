@@ -13,6 +13,7 @@ def sayHello(request):
  return HttpResponse('Hello World')
 
 class MenuItemsView(generics.ListCreateAPIView):
+    permission_classes = [IsAuthenticated]
     queryset = MenuTable.objects.all()
     serializer_class = MenuSerializer
 
@@ -21,6 +22,7 @@ class SingleMenuItemView(generics.RetrieveUpdateAPIView, generics.DestroyAPIView
     serializer_class = MenuSerializer    
 
 class BookingView(generics.ListCreateAPIView):
+    permission_classes = [IsAuthenticated]
     queryset = BookingTable.objects.all()
     serializer_class = BookingSerializer
 

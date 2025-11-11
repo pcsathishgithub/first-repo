@@ -10,6 +10,6 @@ urlpatterns = [
     path('booking/items/', views.BookingView.as_view(), name='booking-items'),
     path('booking/items/<int:pk>/', views.SingleBookingItemView.as_view(), name='single-booking-item'),
     path('api-token-auth/', obtain_auth_token),
-    path('message/', views.msg),
+    path('secure-message/', views.msg),
     
 ]
