@@ -14,8 +14,8 @@ class MenuViewTest(TestCase):
             password='testpassword'
         )
         self.client.force_authenticate(user=self.user)
-        self.menu_item1 = BookingTable.objects.create(name="Manhattan", noOfGuests=10.99, bookingDate="2025-12-11")
-        self.menu_item2 = BookingTable.objects.create(name="Manhattan", noOfGuests=10.99, bookingDate="2025-12-11")
+        self.menu_item1 = BookingTable.objects.create(name="Buhari", noOfGuests=10, bookingDate="2025-12-11")
+        self.menu_item2 = BookingTable.objects.create(name="Sangeetha", noOfGuests=15, bookingDate="2025-12-11")
 
     def test_getall(self):
         response = self.client.get('/api/booking/items/')

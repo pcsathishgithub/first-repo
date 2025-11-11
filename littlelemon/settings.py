@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'restaurant',
     'rest_framework',
+    'djoser', #(!)keep after rest_framework.authtoken
     'rest_framework.authtoken'
 ]
 
